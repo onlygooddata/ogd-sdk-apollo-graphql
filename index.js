@@ -1,4 +1,4 @@
-const { HTTP } = require("ogd-sdk-http-client");
+const { Http } = require("ogd-sdk-http-client");
 
 /**
  * Initialize the plugin to install our request handler.
