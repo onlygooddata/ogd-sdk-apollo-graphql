@@ -1,6 +1,11 @@
 const { HTTP } = require("ogd-sdk-http-client");
 
-
+/**
+ * Initialize the plugin to install our request handler.
+ *
+ * ogdIngressUrl: <string> URL Endpoint for the OGD data collection service.
+ * ogdToken: <string> Unique token provided to you by OGD.
+ */
 function OGDApolloServerPlugin({ ogdIngressUrl, ogdToken: ignoredOGDToken } = {}) {
   // We should NEVER explode someone's GraphQL instance. Therefore, we provide
   // an "error" instance of this plugin.
