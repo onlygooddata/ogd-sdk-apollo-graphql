@@ -24,16 +24,18 @@ const serialize = (name, json) => {
  * ogdIngressUrl: <string> URL Endpoint for the OGD data collection service.
  * ogdToken: <string> Unique token provided to you by OGD.
  */
-function OGDApolloServerPlugin({
-  ogdIngressUrl,
-  ogdToken: ignoredOGDToken,
-} = {}) {
+function OGDApolloServerPlugin({ ogdIngressUrl, ogdToken, disable } = {}) {
   // We should NEVER explode someone's GraphQL instance. Therefore, we provide
   // an "error" instance of this plugin.
   let __ogdInstance = null;
+  let __ogdEmptyResponse = Promise.resolve({});
+
+  if (disable === true || ogdToken.toUpperCase() === "DISABLED") {
+    __ogdInstance = (ignoredHttpCallOptions) => __ogdEmptyResponse;
+  }
 
   try {
-    __ogdInstance = Http.make(ogdIngressUrl);
+    __ogdInstance = __ogdInstance == null ? null : Http.make(ogdIngressUrl);
   } catch (error) {
     console.warn("Failed to instantiate the OGD SDK:", error);
 
@@ -50,6 +52,8 @@ function OGDApolloServerPlugin({
         BODY: ${JSON.stringify(httpCallOptions.body)}
       ```
       );
+
+      return __ogdEmptyResponse;
     };
   }
 
