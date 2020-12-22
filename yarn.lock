@@ -688,9 +688,9 @@ object.entries@^1.1.2:
     has "^1.0.3"
 
 ogd-sdk-http-client@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ogd-sdk-http-client/-/ogd-sdk-http-client-0.1.0.tgz#c953ff8459daae69bd33886d108caf03f5cb8cd7"
-  integrity sha512-fpXseaY1pUPSlVFbzgg2pC9+UvQk8Iq97VG2Yp2y9aaCiRl3+TlYb/Sm/BkM9uWDy9dJrg7X5mX0mzqEQA48tg==
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ogd-sdk-http-client/-/ogd-sdk-http-client-0.1.1.tgz#3d3ff260e8f058ba118b29f9d4b8531e801fa693"
+  integrity sha512-bjLHmqlbK9rGTuQ0g604fBVezdtS7YT4Pu9Ua/+ure02ecUu2UZj0gt4B3O35ru2EuBZk0tqp+O5SOuj/D2Kug==
   dependencies:
     bent "^7.3.12"
 
