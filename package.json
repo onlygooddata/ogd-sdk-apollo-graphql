@@ -1,6 +1,6 @@
 {
   "name": "ogd-sdk-apollo-graphql",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A plugin to the Apollo GraphQL server which allows easy integration of OGD support tools.",
   "main": "index.js",
   "repository": "git@github.com:onlygooddata/ogd-sdk-apollo-graphql.git",
