@@ -35,7 +35,8 @@ function OGDApolloServerPlugin({ ogdIngressUrl, ogdToken, disable } = {}) {
   }
 
   try {
-    __ogdInstance = __ogdInstance == null ? null : Http.make(ogdIngressUrl);
+    __ogdInstance =
+      __ogdInstance == null ? Http.make(ogdIngressUrl) : __ogdInstance;
   } catch (error) {
     console.warn("Failed to instantiate the OGD SDK:", error);
 
